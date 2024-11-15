@@ -1,0 +1,120 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+}
+.form{
+    display: flex;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-basis: auto; */
+    width: 900px;
+    margin: auto;
+    /* margin-top: 20px; */
+    padding: 50px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    justify-content: center;
+    border-top: 5px solid rgb(87, 87, 250);
+}
+
+.input{
+    margin: 40px;
+    justify-content: center;
+    width: 40%;
+}
+
+.input_box{
+    border: none;
+    height: 30px;
+    width: 60%;
+    margin-top: 3px;
+    border-radius: 3px;
+}
+
+.label{
+    color: rgb(8, 6, 6);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submit_input{
+    margin: 40px;
+    justify-content: right;
+    align-items: flex-end;
+    width: 40%;
+    
+
+
+}
+
+.submit_button{
+    background-color: rgba(6, 154, 240, 0.801);
+    border: none;
+    height: 40px;
+    width: 30%;
+    border-radius: 7px;
+}
+
+.input_login{
+    margin: 7px 40px;
+    justify-content: center;
+    width: 70%;
+}
+
+/* //////////////////////////// Dashboard Page ////////////////////////// */
+
+.dashboard_box{
+    position: relative;
+    width: 100%;
+    display: inline;
+}
+
+.dashboard_box h2{
+    position: absolute;
+    margin-left: 630px;
+    text-align: center;
+    margin-top: 11px;
+}
+.dashboard_box img{
+    margin-top: 0px;
+    margin-left: 5px;
+    height: 3%;
+    width: 3%;
+    border-radius: 50px;
+    
+}
+
+.main{
+    background-color: rgb(250, 250, 250);
+    padding: 15px;
+}
+
+.table{
+    width: 50%;
+    background-color: rgb(221, 221, 221);
+    margin:auto;
+    border-top: 5px solid rgb(87, 87, 250);
+    text-align: center;
+    justify-content: center;
+}
+
+.table table{
+    margin-left: 200px;
+}
+.table table tr:nth-child(even){
+    /* border-right: 1px solid black; */
+    background-color:rgb(185, 211, 185);
+}
+
+.table th{
+    border-right: 1px solid black;
+}
