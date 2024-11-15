@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    // echo 'Welcom ' . $_SESSION['first_name'] . ' ' . $_SESSION['last_name'];
+    include('config.php');
+    if(!isset($_SESSION['email']) &&empty($_SESSION['email'])){
+        header('location:index.php');
+    }
+
+    $query = "SELECT * FROM users";
+    $run = mysqli_query($conn, $query);
+    if(mysqli_num_rows($run) > 0){
+        $result = mysqli_fetch_assoc($run);
+    }   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +25,8 @@
     <div class="main">
         <div class="dashboard_box">
             <h2>Dashboard</h2>
-        <img src="img.jpeg" alt="">
+            <!-- <img src="img.jpeg" alt=""> -->
+            <a href="logout.php">Logout</a>
         </div>
     </div>
     <div class="table">
@@ -21,12 +37,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>obaid wazeer</td>
-                    <td>obaidwazeer@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>obaid wazeer</td>
-                    <td>obaidwazeer@gmail.com</td>
+                    <td><?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name']?></td>
+                    <td><?php echo $_SESSION['email']?></td>
                 </tr>
             </tbody>
         </table>
